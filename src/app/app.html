@@ -1,0 +1,55 @@
+<main class="pagina">
+  <section class="panel">
+    
+    <!-- Cabecera sólida con estado integrado -->
+    <header class="cabecera">
+      <div class="datos-tienda">
+        <span class="sucursal">SUCURSAL N.º {{ numeroSucursal }}</span>
+        <h1>{{ nombreTienda }}</h1>
+        <p class="encargado">Responsable: {{ encargado }}</p>
+      </div>
+
+      @if (tiendaAbierta) {
+        <div class="estado abierto">
+          <span class="punto"></span>
+          <span>ABIERTO</span>
+        </div>
+      } @else {
+        <div class="estado cerrado">
+          <span class="punto"></span>
+          <span>CERRADO</span>
+        </div>
+      }
+    </header>
+
+    <!-- Bloque de categorías tipo cuadrícula -->
+    <div class="bloque">
+      <h2>Categorías en tienda</h2>
+      <div class="rejilla-categorias">
+        @for (categoria of categorias; track categoria) {
+          <div class="item-categoria">{{ categoria }}</div>
+        }
+      </div>
+    </div>
+
+    <!-- Bloque de producto con borde lateral de estado -->
+    <div class="bloque">
+      <h2>Producto destacado</h2>
+      <article class="ficha-producto" [class.agotado]="!producto.disponible">
+        <div class="producto-detalle">
+          <h3>{{ producto.nombre }}</h3>
+          <p class="precio">Bs {{ producto.precio }}</p>
+        </div>
+
+        <div class="producto-stock">
+          @if (producto.disponible) {
+            <span class="etiqueta-stock ok">En stock</span>
+          } @else {
+            <span class="etiqueta-stock sin-stock">Agotado</span>
+          }
+        </div>
+      </article>
+    </div>
+
+  </section>
+</main>

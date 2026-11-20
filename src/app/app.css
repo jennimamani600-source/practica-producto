@@ -1,0 +1,170 @@
+.pagina {
+  min-height: 100vh;
+  background-color: #f6f3ee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #3f3d42;
+}
+
+.panel {
+  width: 100%;
+  max-width: 560px;
+  background-color: #fffdfa;
+  border: 1.5px solid #e6dfd5;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(120, 110, 95, 0.08);
+}
+
+/* Cabecera en tono pastel cálido */
+.cabecera {
+  background-color: #efe9f4;
+  color: #3a3442;
+  padding: 26px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.sucursal {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #7c7189;
+  margin-bottom: 6px;
+}
+
+.cabecera h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.encargado {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #645c6e;
+}
+
+/* Indicador Abierto / Cerrado en verde salvia y coral pastel */
+.estado {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  border-radius: 14px;
+  border: 1.5px solid;
+}
+
+.estado.abierto {
+  background-color: #e3f1e8;
+  color: #2f6b47;
+  border-color: #b8dcc5;
+}
+
+.estado.cerrado {
+  background-color: #fae3e1;
+  color: #8f3b35;
+  border-color: #ebb7b2;
+}
+
+.punto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* Bloques internos */
+.bloque {
+  padding: 24px 28px;
+  border-top: 1.5px solid #eee8df;
+}
+
+.bloque h2 {
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #857f8a;
+}
+
+/* Cuadrícula de categorías en tonos suaves */
+.rejilla-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 10px;
+}
+
+.item-categoria {
+  border: 1.5px solid #dce6ec;
+  background-color: #f0f6f9;
+  color: #3c5869;
+  border-radius: 14px;
+  padding: 11px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Ficha de producto redondeada */
+.ficha-producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background-color: #faf6f0;
+  border: 1.5px solid #e8dfd3;
+  border-left: 6px solid #8ec5a3;
+  border-radius: 16px;
+}
+
+.ficha-producto.agotado {
+  border-left-color: #e39b95;
+}
+
+.producto-detalle h3 {
+  margin: 0 0 6px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #3a3442;
+}
+
+.precio {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  color: #5c5366;
+}
+
+.etiqueta-stock {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 1.5px solid;
+}
+
+.etiqueta-stock.ok {
+  background-color: #e3f1e8;
+  color: #2f6b47;
+  border-color: #b8dcc5;
+}
+
+.etiqueta-stock.sin-stock {
+  background-color: #fae3e1;
+  color: #8f3b35;
+  border-color: #ebb7b2;
+}
